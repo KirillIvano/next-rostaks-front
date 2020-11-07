@@ -1,8 +1,21 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+
 const enhanceWebpackConfig = config => {
+    config.resolve.alias = {
+        ...config.resolve.alias,
+        '@/*': path.resolve(__dirname, 'src'),
+    };
+
+    config.plugins.push(new MiniCssExtractPlugin());
+
     config.module.rules.push({
-        test: /\.(sa|sc|le|c)ss$/,
+        test: /\.(sc|c)ss$/,
+        exclude: /flexboxgrid/,
         use: [
-            'style-loader',
+            MiniCssExtractPlugin.loader,
             {
                 loader: 'typings-for-css-modules-loader',
                 options: {
