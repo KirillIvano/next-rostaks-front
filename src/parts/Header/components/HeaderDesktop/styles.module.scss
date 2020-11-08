@@ -1,0 +1,10 @@
+@import "~vars/pads";
+
+.header {
+    display: grid;
+    grid-template-columns: 60px 1fr 200px;
+    align-items: center;
+
+    column-gap: $pad4;
+    padding: $pad3 $pad6;
+}

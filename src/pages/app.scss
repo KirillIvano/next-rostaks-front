@@ -1,0 +1,21 @@
+@import "~vars/fonts";
+
+* {
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $main_ff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

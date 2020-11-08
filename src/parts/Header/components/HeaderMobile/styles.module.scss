@@ -1,0 +1,11 @@
+@import "~vars/pads";
+
+.header {
+    .headerInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: $pad2 $pad4;
+    }
+}

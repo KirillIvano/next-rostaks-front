@@ -1,0 +1,21 @@
+@import "~vars/colors";
+@import "~vars/fonts";
+@import "~vars/pads";
+
+.nav {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 100px);
+    justify-content: center;
+
+    .navItem {
+        padding: $pad4;
+
+        font-size: $font_sm;
+        cursor: pointer;
+    }
+
+    .navItem.selected {
+        color: $firm;
+    }
+}

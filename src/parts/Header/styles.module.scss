@@ -1,0 +1,7 @@
+@import "~vars/colors";
+
+.header {
+    background: $white;
+
+    box-shadow: 0 0 10px 0 lighten($black, 60);
+}

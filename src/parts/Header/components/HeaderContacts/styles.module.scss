@@ -1,0 +1,17 @@
+@import "~vars/fonts";
+@import "~vars/colors";
+
+.headerContacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .phone {
+        font-size: $font_md;
+    }
+
+    .mail {
+        font-size: $font_sm;
+        color: $gray;
+    }
+}
