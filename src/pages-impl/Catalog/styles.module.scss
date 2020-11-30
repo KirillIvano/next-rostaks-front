@@ -1,0 +1,41 @@
+@import "~vars/pads";
+@import "~vars/screens";
+@import "~vars/fonts";
+
+.catalog {
+    padding-top: $pad8;
+    padding-bottom: $pad16;
+
+    .sectionHeadline {
+        font-size: $font_xl;
+    }
+
+    .contentRow {
+        margin-top: $pad12;
+
+        .catalogMenu {
+            padding-top: $pad6;
+            padding-right: $pad4;
+
+            .priceSort {
+                margin-top: $pad3;
+            }
+        }
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .catalog {
+        .sectionHeadline {
+            font-size: $font_lg;
+        }
+
+        .contentRow {
+            margin-top: $pad6;
+
+            .catalogMenu {
+                padding-top: $pad4;
+            }
+        }
+    }
+}

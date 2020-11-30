@@ -1,0 +1,14 @@
+@import "~vars/pads";
+@import "~vars/screens";
+
+.categoryPreview {
+    width: 100%;
+
+    margin-top: $pad4;
+}
+
+@media all and (max-width: $screen_sm) {
+    .categoryPreview {
+        margin-top: $pad2;
+    }
+}

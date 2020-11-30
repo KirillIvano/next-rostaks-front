@@ -1,0 +1,13 @@
+@import "~vars/screens";
+
+@media all and (min-width: $screen_sm) {
+    .mobileVisible {
+        display: none;
+    }
+}
+
+@media all and (max-width: $screen_sm - 1px) {
+    .desktopVisible {
+        display: none;
+    }
+}

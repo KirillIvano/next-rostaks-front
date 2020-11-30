@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 import classnames from 'classnames';
 
-import {ROUTES_NAMES} from '@/routes';
+import {getCatalogPath, getContactsPath} from '@/routes';
 
 import styles from './styles.module.scss';
 
@@ -36,14 +36,17 @@ const MobileNav = () => {
 
     return (
         <ul className={styles.nav}>
-            {Object.entries(ROUTES_NAMES).map(([path, name]) => (
-                <MobileNavItem
-                    key={path}
-                    name={name}
-                    path={path}
-                    isSelected={route.startsWith(path)}
-                />
-            ))}
+            <MobileNavItem
+                name={'Каталог'}
+                path={getCatalogPath()}
+                isSelected={getCatalogPath() === route}
+            />
+
+            <MobileNavItem
+                name={'Контакты'}
+                path={getContactsPath()}
+                isSelected={getContactsPath() === route}
+            />
         </ul>
     );
 };

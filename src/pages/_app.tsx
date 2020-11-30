@@ -1,5 +1,6 @@
 import React from 'react';
 import {NextComponentType} from 'next';
+import 'flexboxgrid2';
 
 import {Header} from '@/parts';
 

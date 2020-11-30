@@ -1,6 +1,4 @@
-export const ROUTES_NAMES = {
-    '/catalog': 'Каталог',
-    '/about': 'О нас',
-    '/contacts': 'Контакты',
-    '/colors': 'Колеровка',
-}
+export const getProductPagePath = (productId: number) =>
+    `/product/${productId}`;
+export const getCatalogPath = () => '/catalog';
+export const getContactsPath = () => '/contacts';

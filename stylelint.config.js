@@ -9,5 +9,6 @@ module.exports = {
         'number-no-trailing-zeros': true,
         'value-keyword-case': null,
         'indentation': 4,
+        'function-name-case': null,
     },
 };

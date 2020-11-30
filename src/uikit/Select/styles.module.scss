@@ -1,0 +1,23 @@
+@import "~vars/pads";
+@import "~vars/colors";
+
+.selectWrapper {
+    .select {
+        width: 100%;
+        padding: $pad2 $pad3 $pad2 $pad1;
+
+        border: 2px solid $medium_gray;
+        border-radius: 6px;
+
+        transition: border-color 0.4s ease-in-out;
+
+        &:hover {
+            border-color: $gray;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $sub_firm;
+        }
+    }
+}

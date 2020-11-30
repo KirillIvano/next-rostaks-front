@@ -1,0 +1,72 @@
+@import "~vars/colors";
+@import "~vars/screens";
+@import "~vars/pads";
+@import "~vars/fonts";
+
+.cardContainer {
+    cursor: pointer;
+}
+
+@media all and (min-width: $screen_sm) {
+    .cardContainer {
+        display: flex;
+        align-items: center;
+
+        height: 100px;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border: 6px solid $light_gray;
+        border-color: $light_gray;
+        border-radius: 6px;
+
+        transition: border-color 0.3s ease-in-out;
+
+        .cardContent {
+            padding: $pad4;
+            width: 80%;
+
+            background-color: $light_gray;
+            border-radius: 0 6px 6px 0;
+
+            transition: background-color 0.3s ease-in-out,
+        }
+    }
+
+    .cardContainer:focus,
+    .cardContainer:hover {
+        outline: none;
+        border-color: $sub_firm;
+    }
+
+    .cardContainer.selected {
+        border-color: $firm;
+
+        .cardContent {
+            background: $firm;
+            color: $light_gray;
+        }
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .cardContainer {
+        padding: $pad3;
+
+        background-image: none !important;
+        border: 1px solid black;
+        border-radius: 4px;
+
+        font-size: $font_sm;
+        text-align: center;
+
+        transition: background-color 0.3s ease-in-out;
+
+        &.selected {
+            background-color: $firm;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "~vars/pads";
+@import "~vars/fonts";
+@import "~vars/colors";
+
+.productsRow {
+    align-items: stretch;
+
+    .emptyState {
+        margin-top: $pad8;
+        padding: $pad0 $pad4;
+
+        color: $black;
+        font-size: $font_lg;
+    }
+
+    .productWrapper {
+        margin-top: $pad8;
+
+        .product {
+            height: 100%;
+        }
+    }
+}

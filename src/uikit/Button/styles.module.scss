@@ -1,0 +1,50 @@
+@import "~vars/pads";
+@import "~vars/fonts";
+@import "~vars/colors";
+
+.button {
+    padding: $pad4 $pad6;
+
+    font-size: $font_sm;
+    border: none;
+    border-width: 2px;
+
+    transition:
+        background-color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.button.primary {
+    background-color: $firm;
+    border-color: $firm;
+    color: white;
+
+    &:hover,
+    &:focus {
+        background-color: $sub_firm;
+        border-color: $sub_firm;
+    }
+
+    &:disabled {
+        background-color: $gray;
+        border-radius: $gray;
+    }
+}
+
+.button.secondary {
+    background-color: transparent;
+    border-color: $firm;
+    color: $firm;
+
+    &:hover,
+    &:focus {
+        background-color: $light_gray;
+    }
+
+    &:disabled {
+        color: $gray;
+        border-color: $gray;
+    }
+}
