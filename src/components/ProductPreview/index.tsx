@@ -26,7 +26,6 @@ const ProductPreview = ({
     image,
     shortDescription,
 
-
     className,
 }: ProductPreviewProps) => {
     const router = useRouter();

@@ -1,8 +1,10 @@
-import {GetStaticPaths, GetStaticProps} from 'next';
+import {GetStaticPaths} from 'next';
 
-import {getProductById, getProductsPreviews} from '@/services/products';
+import {getCategoryById, getProductById, getProductsPreviews} from '@/services/products';
 import ProductPage from '@/pages-impl/Product';
 import {ProductType} from '@/domain/products/types';
+import {ProductCategoryType} from '@/domain/productsCategories/types';
+import {GetStaticProps} from '@/types';
 
 
 const getProductsIds = async () => {
@@ -26,7 +28,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 
-export type ProductPageStaticProps = ProductType;
+export type ProductPageStaticProps = {
+    product: ProductType,
+    category: ProductCategoryType
+};
+
 export const getStaticProps: GetStaticProps<ProductPageStaticProps> = async ({params}) => {
     const productId = (params as {id: string}).id;
 
@@ -35,9 +41,17 @@ export const getStaticProps: GetStaticProps<ProductPageStaticProps> = async ({pa
         throw new Error(productRes.error);
     }
 
-    const product = productRes.data;
+    const {product} = productRes.data;
+    const {categoryId} = product;
 
-    return {props: {...product}};
+    const categoryRes = await getCategoryById(categoryId);
+    if (!categoryRes.ok) {
+        throw new Error(categoryRes.error);
+    }
+
+    const {category} = categoryRes.data;
+
+    return {props: {product, category}};
 };
 
 

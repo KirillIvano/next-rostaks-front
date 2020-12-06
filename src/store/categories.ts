@@ -3,7 +3,7 @@ import {observable, computed, action, makeObservable} from 'mobx';
 import {ProductCategoryType} from '@/domain/productsCategories/types';
 
 
-class CategoriesStore {
+export class CategoriesStore {
     @observable
     private _categories = new Map<number, ProductCategoryType>();
 

@@ -1,0 +1,32 @@
+@import "~vars/pads";
+@import "~vars/colors";
+@import "~vars/fonts";
+@import "~vars/screens";
+
+.infoContainer {
+    padding-left: $pad4;
+
+    .productName {
+        font-size: $font_xl;
+    }
+
+    .productPrice {
+        margin-top: $pad6;
+
+        color: $black;
+        font-size: $font_lg;
+    }
+
+    .productPriceInfo {
+        margin-top: $pad1;
+
+        font-size: $font_sm;
+        color: $firm;
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .infoContainer {
+        padding-left: $pad0;
+    }
+}

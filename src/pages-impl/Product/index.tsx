@@ -1,9 +1,11 @@
 import React from 'react';
+import classnames from 'classnames';
 
 import {ProductPageStaticProps} from '@/pages/product/[id]';
-import {Box} from '@/uikit';
 
-// import styles from './styles.scss';
+import {WithProductStaticData} from './hooks/usePageStaticData';
+import {ProductInfo, ProductView} from './components';
+import styles from './styles.module.scss';
 
 
 type ProductPageProps = {
@@ -11,16 +13,22 @@ type ProductPageProps = {
 }
 
 const Product = ({
-    pageProps: {
-        name,
-    },
-}: ProductPageProps) => {
-    return (
-        <Box>
-            <p>{name}</p>
-        </Box>
-    );
-};
+    pageProps,
+}: ProductPageProps) => (
+    <WithProductStaticData value={pageProps}>
+        <div className={classnames('container', styles.productPage)}>
+            <div className="row">
+                <div className="col-md-6">
+                    <ProductView  />
+                </div>
+
+                <div className="col-md-6">
+                    <ProductInfo />
+                </div>
+            </div>
+        </div>
+    </WithProductStaticData>
+);
 
 
 export default Product;
