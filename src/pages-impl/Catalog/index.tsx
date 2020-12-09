@@ -2,13 +2,20 @@ import React, {useEffect} from 'react';
 import classnames from 'classnames';
 import {observer} from 'mobx-react-lite';
 
-import styles from './styles.module.scss';
+import {CatalogStaticProps} from '@/pages/catalog';
+
 import {CatalogCategories, Products, SearchInput, PriceSort} from './components';
 import {useCategoryId} from './hooks/useCategoryId';
 import {useCatalogStore} from './hooks/useCatalogStore';
+import {WithCatalogStaticData} from './hooks/useCatalogStaticData';
+import styles from './styles.module.scss';
 
 
-export const Catalog = observer(() => {
+type CatalogProps = {
+    pageProps: CatalogStaticProps
+}
+
+export const Catalog = observer(({pageProps}: CatalogProps) => {
     const categoryId = useCategoryId();
     const catalogStore = useCatalogStore();
 
@@ -21,44 +28,46 @@ export const Catalog = observer(() => {
     }, [categoryId, catalogStore]);
 
     return (
-        <div className={classnames(styles.catalog, 'container')}>
+        <WithCatalogStaticData value={pageProps}>
+            <div className={classnames(styles.catalog, 'container')}>
 
-            <section>
-                <h1 className={styles.sectionHeadline}>
+                <section>
+                    <h1 className={styles.sectionHeadline}>
                     Категории продуктов
-                </h1>
+                    </h1>
 
-                <CatalogCategories />
-            </section>
+                    <CatalogCategories />
+                </section>
 
-            <section className={styles.contentRow}>
-                <h1 className={styles.sectionHeadline}>
+                <section className={styles.contentRow}>
+                    <h1 className={styles.sectionHeadline}>
                     Продукция
-                </h1>
+                    </h1>
 
-                <div className="row">
-                    <div
-                        className={classnames(
-                            styles.catalogMenu,
-                            'col-md-3 col-xs-12',
-                        )}
-                    >
-                        <SearchInput />
-                        <PriceSort className={styles.priceSort} />
-                    </div>
+                    <div className="row">
+                        <div
+                            className={classnames(
+                                styles.catalogMenu,
+                                'col-md-3 col-xs-12',
+                            )}
+                        >
+                            <SearchInput />
+                            <PriceSort className={styles.priceSort} />
+                        </div>
 
-                    <div
-                        className={classnames(
-                            styles.catalogContent,
-                            'col-md-9 col-xs-12',
-                        )}
-                    >
-                        <Products
-                            wrapperClass={styles.catalogProducts}
-                        />
+                        <div
+                            className={classnames(
+                                styles.catalogContent,
+                                'col-md-9 col-xs-12',
+                            )}
+                        >
+                            <Products
+                                wrapperClass={styles.catalogProducts}
+                            />
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </WithCatalogStaticData>
     );
 });

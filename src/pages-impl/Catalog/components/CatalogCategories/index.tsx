@@ -1,30 +1,21 @@
 import React, {useCallback} from 'react';
-import useSWR from 'swr';
 import classnames from 'classnames';
-import Skeleton from 'react-loading-skeleton';
 import {useRouter} from 'next/router';
 
 import {CategoryPreview} from '@/components';
-import {ProductCategoryType} from '@/domain/productsCategories/types';
-import {getApiUrl} from '@/services/util/getApiUrl';
 
 import {useCategoryId} from '../../hooks/useCategoryId';
+import {useCatalogStaticData} from '../../hooks/useCatalogStaticData';
 import styles from './styles.module.scss';
 
-
-const fetchJson = (url: string, options?: RequestInit) => fetch(url, options).then(res => res.json());
 
 type CatalogCategoriesProps = {
     className?: string;
 }
 
 const CatalogCategories = ({className}: CatalogCategoriesProps) => {
-    const {error, data} = useSWR<{categories: ProductCategoryType[]}, Error>(
-        getApiUrl('/products/categories'),
-        fetchJson,
-    );
-
     const categoryId = useCategoryId();
+    const {categories} = useCatalogStaticData();
 
     const router = useRouter();
     const handleSelect = useCallback(
@@ -32,9 +23,6 @@ const CatalogCategories = ({className}: CatalogCategoriesProps) => {
             router.push('/catalog' + (id ? `?categoryId=${id}` : '')),
         [router],
     );
-
-    if (error) return <p>{error.message}</p>;
-    if (!data) return <Skeleton height={100} />;
 
     return (
         <div
@@ -57,7 +45,7 @@ const CatalogCategories = ({className}: CatalogCategoriesProps) => {
             </div>
 
 
-            {data.categories.map(
+            {categories.map(
                 category => (
                     <div
                         className="col-md-3 col-xs-6"
