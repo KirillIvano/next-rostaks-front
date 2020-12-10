@@ -1,0 +1,23 @@
+@import "~vars/pads";
+@import "~vars/fonts";
+@import "~vars/colors";
+
+.descriptionBlock {
+    margin-top: $pad6;
+
+    .descriptionHeadline {
+        font-size: $font_lg;
+
+        margin-bottom: $pad4;
+    }
+
+    .descriptionItem {
+        margin-top: $pad2;
+        font-size: $font_md;
+        color: $dark_gray;
+    }
+}
+
+.downloadInfoBtn {
+    margin-top: $pad6;
+}

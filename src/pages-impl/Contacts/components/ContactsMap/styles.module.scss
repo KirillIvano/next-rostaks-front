@@ -1,0 +1,35 @@
+@import "~vars/screens";
+@import "~vars/colors";
+
+@keyframes blick {
+    from {
+        background-color: white;
+    }
+
+    50% {
+        background-color: $light_gray;
+    }
+
+    to {
+        background-color: white;
+    }
+}
+
+.mapWrapper {
+    width: 100%;
+    animation: blick 1s linear infinite;
+
+    .contactsMap {
+        display: block;
+        height: 312px;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .mapWrapper {
+        .contactsMap {
+            height: 256px;
+        }
+    }
+}
