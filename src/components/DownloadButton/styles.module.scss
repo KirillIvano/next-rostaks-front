@@ -1,0 +1,15 @@
+@import "~vars/pads";
+
+.donwloadButton {
+    display: flex;
+    align-items: center;
+
+    .downloadImage {
+        width: $pad4;
+        height: $pad4;
+    }
+
+    .buttonContent {
+        margin-left: $pad3;
+    }
+}
