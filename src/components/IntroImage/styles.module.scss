@@ -1,0 +1,24 @@
+@import "~vars/screens";
+
+.wrapper {
+    position: relative;
+
+    height: 256px;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .wrapper {
+        height: 180px;
+    }
+}
