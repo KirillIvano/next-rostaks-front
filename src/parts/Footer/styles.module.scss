@@ -1,0 +1,9 @@
+@import "~vars/pads";
+@import "~vars/colors";
+
+.footer {
+    padding-top: $pad8;
+    padding-bottom: $pad8;
+
+    background-color: $light_gray;
+}
