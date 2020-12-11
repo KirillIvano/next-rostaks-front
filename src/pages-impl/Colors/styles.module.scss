@@ -1,0 +1,50 @@
+@import "~vars/pads";
+@import "~vars/colors";
+@import "~vars/fonts";
+@import "~vars/screens";
+
+.colorsPage {
+    margin-top: $pad6;
+    margin-bottom: $pad6;
+
+    .pageHeadline {
+        font-size: $font_xxl;
+        color: $black;
+    }
+
+    .introImage {
+        margin-top: $pad6;
+    }
+
+    .colorsInfo {
+        margin-top: $pad6;
+
+        .colorsInfoItem {
+            margin-top: $pad2;
+
+            line-height: 1.2;
+            color: $dark_gray;
+        }
+
+        .colorsInfoItem:first-child {
+            margin-top: $pad0;
+        }
+    }
+
+    .btnContainer {
+        display: flex;
+        justify-content: flex-start;
+
+        .downloadColors {
+            margin-top: $pad6;
+        }
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .colorsPage {
+        .btnContainer {
+            justify-content: center;
+        }
+    }
+}

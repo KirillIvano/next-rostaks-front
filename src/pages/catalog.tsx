@@ -21,6 +21,7 @@ export const getStaticProps: GetStaticProps = async () => {
         props: {
             categories: categoriesRes.data.categories,
         },
+        revalidate: 5,
     };
 };
 

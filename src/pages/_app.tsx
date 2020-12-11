@@ -2,7 +2,7 @@ import React from 'react';
 import {NextComponentType} from 'next';
 import 'flexboxgrid2';
 
-import {Header} from '@/parts';
+import {Header, Footer} from '@/parts';
 
 import './app.scss';
 
@@ -13,9 +13,13 @@ type AppProps = {
 
 const App = ({Component, ...props}: AppProps) => {
     return (
-        <div>
-            <Header />
-            <Component {...props} />
+        <div className="appContainer">
+            <div>
+                <Header />
+                <Component {...props} />
+            </div>
+
+            <Footer />
         </div>
     );
 };

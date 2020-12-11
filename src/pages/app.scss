@@ -1,7 +1,10 @@
 @import "~vars/fonts";
 
-* {
+*,
+*::before,
+*::after {
     font-family: inherit;
+    font-weight: inherit;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,6 +12,7 @@
 
 body {
     font-family: $main_ff;
+    font-weight: normal;
 }
 
 li {
@@ -23,4 +27,13 @@ input {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    min-height: 100vh;
 }
