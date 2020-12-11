@@ -3,7 +3,7 @@ import {useRouter} from 'next/router';
 import Link from 'next/link';
 import classnames from 'classnames';
 
-import {getCatalogPath, getContactsPath} from '@/routes';
+import {getCatalogPath, getColorsPath, getContactsPath} from '@/routes';
 
 import styles from './styles.module.scss';
 
@@ -56,6 +56,12 @@ const DesktopNav = ({className}: DesktopNavProps) => {
                 name={'Контакты'}
                 path={getContactsPath()}
                 isSelected={getContactsPath() === route}
+            />
+
+            <DesktopNavItem
+                name={'Колеровка'}
+                path={getColorsPath()}
+                isSelected={getColorsPath() === route}
             />
         </ul>
     );

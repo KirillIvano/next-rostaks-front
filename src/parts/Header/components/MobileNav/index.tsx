@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 import classnames from 'classnames';
 
-import {getCatalogPath, getContactsPath} from '@/routes';
+import {getCatalogPath, getColorsPath, getContactsPath} from '@/routes';
 
 import styles from './styles.module.scss';
 
@@ -46,6 +46,12 @@ const MobileNav = () => {
                 name={'Контакты'}
                 path={getContactsPath()}
                 isSelected={getContactsPath() === route}
+            />
+
+            <MobileNavItem
+                name={'Колеровка'}
+                path={getColorsPath()}
+                isSelected={getColorsPath() === route}
             />
         </ul>
     );
