@@ -14,7 +14,7 @@ const ProductView = () => {
         <img
             aria-hidden="true"
             alt="Картинка продукта"
-            src={getImageUrl(image)}
+            src={image ? getImageUrl(image) : '/product_placeholer.png'}
 
             className={styles.productView}
         />

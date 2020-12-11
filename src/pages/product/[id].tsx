@@ -51,7 +51,10 @@ export const getStaticProps: GetStaticProps<ProductPageStaticProps> = async ({pa
 
     const {category} = categoryRes.data;
 
-    return {props: {product, category}};
+    return {
+        props: {product, category},
+        revalidate: 5,
+    };
 };
 
 
