@@ -7,15 +7,16 @@ import {Button} from '@/uikit';
 import {getProductPagePath} from '@/routes';
 
 import styles from './styles.module.scss';
+import {PAINT_MEASURE} from '@/consts';
 
 
 type ProductPreviewProps = {
     productId: number;
     price: number;
     name: string;
-    image: string;
     shortDescription: string;
 
+    image?: string;
     className?: string;
 }
 
@@ -45,7 +46,7 @@ const ProductPreview = ({
                     className={styles.imageWrapper}
                 >
                     <img
-                        src={getImageUrl(image)}
+                        src={image ? getImageUrl(image) : '/product_placeholder.png'}
                         className={styles.productImage}
                         alt=""
                     />
@@ -61,7 +62,7 @@ const ProductPreview = ({
                     </p>
 
                     <p className={styles.productPrice}>
-                        {`~ ${price} ₽`}
+                        {`~ ${price} ₽/${PAINT_MEASURE}`}
                     </p>
                 </div>
             </div>

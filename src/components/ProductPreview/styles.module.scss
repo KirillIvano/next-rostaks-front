@@ -1,6 +1,7 @@
 @import "~vars/pads";
 @import "~vars/fonts";
 @import "~vars/colors";
+@import "~vars/screens";
 
 .productPreview {
     display: flex;
@@ -25,22 +26,35 @@
         }
 
         .productInfo {
-            padding: $pad2;
+            padding: $pad4 $pad2 $pad2 $pad2;
             font-size: $font_sm;
 
             .productName {
                 color: $black;
+                font-size: $font_md;
             }
 
             .productDescription {
+                margin-top: $pad2;
+
                 color: $gray;
-                margin-top: $pad1;
+                font-size: 0.825rem;
             }
 
             .productPrice {
                 margin-top: $pad2;
 
                 font-size: $font_md;
+            }
+        }
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .productPreview {
+        .cardContent {
+            .productInfo {
+                padding: $pad4 0 $pad2 0;
             }
         }
     }
