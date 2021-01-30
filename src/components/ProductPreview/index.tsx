@@ -5,9 +5,10 @@ import {useRouter} from 'next/router';
 import {getImageUrl} from '@/util/getImageUrl';
 import {Button} from '@/uikit';
 import {getProductPagePath} from '@/routes';
+import {PAINT_MEASURE} from '@/consts';
 
 import styles from './styles.module.scss';
-import {PAINT_MEASURE} from '@/consts';
+import {LazyProductImage} from './..';
 
 
 type ProductPreviewProps = {
@@ -45,7 +46,7 @@ const ProductPreview = ({
                 <div
                     className={styles.imageWrapper}
                 >
-                    <img
+                    <LazyProductImage
                         src={image ? getImageUrl(image) : '/product_placeholder.png'}
                         className={styles.productImage}
                         alt=""
@@ -62,7 +63,11 @@ const ProductPreview = ({
                     </p>
 
                     <p className={styles.productPrice}>
-                        {`~ ${price} ₽/${PAINT_MEASURE}`}
+                        {
+                            price === 0 ?
+                                'Цена у менеджера' :
+                                `~ ${price} ₽/${PAINT_MEASURE}`
+                        }
                     </p>
                 </div>
             </div>
