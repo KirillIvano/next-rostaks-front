@@ -27,6 +27,7 @@ export const LazyLoadProvider = ({
         const handleScroll = () =>
             debouncer.fire(() => setCurrentScroll(pageYOffset));
 
+        setInterval(handleScroll, 200);
         window.addEventListener('scroll', handleScroll);
 
         return () => {
