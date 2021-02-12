@@ -1,0 +1,39 @@
+@import "~vars/pads";
+@import "~vars/colors";
+@import "~vars/fonts";
+
+@keyframes fading {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.2;
+    }
+}
+
+.message {
+    padding: $pad3;
+    margin-bottom: $pad1;
+
+    width: 200px;
+
+    border-radius: 4px;
+
+    animation: fading 10s;
+    cursor: pointer;
+
+    .messageText {
+        font-size: $font_sm;
+    }
+}
+
+.message_success {
+    background-color: $firm;
+    color: white;
+}
+
+.message_error {
+    background: darkred;
+    color: white;
+}

@@ -3,7 +3,13 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 import classnames from 'classnames';
 
-import {getCatalogPath, getColorsPath, getContactsPath} from '@/routes';
+import {
+    getAboutPath,
+    getCatalogPath,
+    getColorsPath,
+    getContactsPath,
+    getDeliveryPath,
+} from '@/routes';
 
 import styles from './styles.module.scss';
 
@@ -35,25 +41,44 @@ const MobileNav = () => {
     const {route} = useRouter();
 
     return (
-        <ul className={styles.nav}>
-            <MobileNavItem
-                name={'Каталог'}
-                path={getCatalogPath()}
-                isSelected={getCatalogPath() === route}
-            />
+        <>
+            <ul className={styles.nav}>
+                <MobileNavItem
+                    name={'Каталог'}
+                    path={getCatalogPath()}
+                    isSelected={getCatalogPath() === route}
+                />
 
-            <MobileNavItem
-                name={'Контакты'}
-                path={getContactsPath()}
-                isSelected={getContactsPath() === route}
-            />
+                <MobileNavItem
+                    name={'Контакты'}
+                    path={getContactsPath()}
+                    isSelected={getContactsPath() === route}
+                />
 
-            <MobileNavItem
-                name={'Колеровка'}
-                path={getColorsPath()}
-                isSelected={getColorsPath() === route}
-            />
-        </ul>
+                <MobileNavItem
+                    name={'Доставка'}
+                    path={getDeliveryPath()}
+                    isSelected={getDeliveryPath() === route}
+                />
+            </ul>
+
+            <ul className={styles.nav}>
+                <MobileNavItem
+                    name={'О нас'}
+                    path={getAboutPath()}
+                    isSelected={getAboutPath() === route}
+                />
+
+                <MobileNavItem
+                    name={'Колеровка'}
+                    path={getColorsPath()}
+                    isSelected={getColorsPath() === route}
+                />
+
+                {/* dirty hack */}
+                <div className={styles.navItem} />
+            </ul>
+        </>
     );
 };
 

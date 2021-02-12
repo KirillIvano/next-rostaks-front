@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 
 import {isPhoneSize} from '@/util/isPhoneSize';
 import {copyElementContent} from '@/util/copyElementContent';
+import {useMessages} from '@/domain/messages/hooks';
 
 
 type PhoneWrapperProps = {
@@ -15,6 +16,8 @@ const PhoneWrapper = ({
 }: PhoneWrapperProps) => {
     const wrapperRef = useRef<HTMLAnchorElement | null>(null);
 
+    const messagesState = useMessages();
+
     const handleClick = (e: React.SyntheticEvent<HTMLElement>) => {
         e.preventDefault();
 
@@ -26,6 +29,7 @@ const PhoneWrapper = ({
             tempAnchor.click();
         } else if (wrapperRef.current){
             copyElementContent(e.currentTarget);
+            messagesState.pushMessage('Телефон успешно скопирован', 'success');
         }
     };
 

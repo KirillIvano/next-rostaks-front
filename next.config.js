@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-        api: 'http://5.63.152.182:5000',
-        imagesHost: 'http://5.63.152.182',
+        api: 'http://80.78.245.159:5000',
+        imagesHost: 'http://80.78.245.159',
     },
 };

@@ -1,0 +1,14 @@
+@import "~vars/colors";
+@import "~vars/fonts";
+@import "~vars/pads";
+
+.priceListDescription {
+    margin-top: $pad4;
+    max-width: 400px;
+
+    font-size: $font_sm;
+}
+
+.priceListDownload {
+    margin-top: $pad4;
+}

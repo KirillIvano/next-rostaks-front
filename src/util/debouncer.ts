@@ -5,6 +5,8 @@ export class Debouncer {
         private _timeoutMS: number,
     ) {}
 
+    cancel = () =>
+        this._timeoutId && clearTimeout(this._timeoutId);
 
     fire = (func: () => void) => {
         if (this._timeoutId !== null) {

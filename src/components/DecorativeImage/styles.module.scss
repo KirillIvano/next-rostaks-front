@@ -1,0 +1,13 @@
+.image {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    background-size: cover;
+    background-position: center;
+}

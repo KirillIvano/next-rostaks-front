@@ -39,6 +39,11 @@
     .cardContainer:hover {
         outline: none;
         border-color: $sub_firm;
+
+        .cardContent {
+            color: $white;
+            background-color: $sub_firm;
+        }
     }
 
     .cardContainer.selected {

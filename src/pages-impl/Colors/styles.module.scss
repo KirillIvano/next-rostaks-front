@@ -12,18 +12,14 @@
         color: $black;
     }
 
-    .introImage {
-        margin-top: $pad6;
-    }
-
     .colorsInfo {
         margin-top: $pad6;
 
         .colorsInfoItem {
-            margin-top: $pad2;
+            margin-top: $pad4;
 
-            line-height: 1.2;
-            color: $dark_gray;
+            line-height: 1.5;
+            color: $black;
         }
 
         .colorsInfoItem:first-child {
@@ -37,6 +33,14 @@
 
         .downloadColors {
             margin-top: $pad6;
+        }
+    }
+
+    .gallery {
+        margin-top: $pad8;
+
+        .galleryItem {
+            margin-top: $pad4;
         }
     }
 }

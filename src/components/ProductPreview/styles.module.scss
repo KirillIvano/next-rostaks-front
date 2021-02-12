@@ -12,19 +12,6 @@
     .cardContent {
         width: 100%;
 
-        .imageWrapper {
-            position: relative;
-            overflow: hidden;
-
-            padding-bottom: 100%;
-            width: 100%;
-
-            .productImage {
-                position: absolute;
-                width: 100%;
-            }
-        }
-
         .productInfo {
             padding: $pad4 $pad2 $pad2 $pad2;
             font-size: $font_sm;

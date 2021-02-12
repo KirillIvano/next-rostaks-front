@@ -5,13 +5,14 @@
 .nav {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(5, 100px);
     justify-content: center;
 
     .navItem {
         padding: $pad4;
 
         font-size: $font_sm;
+        text-align: center;
         cursor: pointer;
     }
 

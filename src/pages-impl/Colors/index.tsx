@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import {DownloadButton, IntroImage} from '@/components';
+import {DecorativeImage, DownloadButton} from '@/components';
 
 import styles from './styles.module.scss';
 
@@ -14,11 +14,6 @@ const Colors = () => {
             <h1 className={classnames(styles.pageHeadline, 'container')}>
                 Колеровка
             </h1>
-
-            <IntroImage
-                className={styles.introImage}
-                imageUrl="/colors_intro.jpg"
-            />
 
             <section className={classnames(styles.colorsInfo, 'container')}>
                 <p className={styles.colorsInfoItem}>
@@ -44,6 +39,39 @@ const Colors = () => {
                     </DownloadButton>
                 </div>
             </section>
+
+            <div className={classnames(styles.gallery, 'container')}>
+                <div className="row">
+                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-4')}>
+                        <DecorativeImage
+                            src='/colors/intro.jpg'
+                            proportions='5x2'
+                        />
+                    </div>
+
+                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-4')}>
+                        <DecorativeImage
+                            src='/colors/colors1.jpg'
+                            proportions='5x2'
+                        />
+                    </div>
+
+                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-4')}>
+                        <DecorativeImage
+                            src='/colors/colors2.jpg'
+                            proportions='5x2'
+                        />
+                    </div>
+
+                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-4')}>
+                        <DecorativeImage
+                            src='/colors/colors3.jpg'
+                            proportions='5x2'
+                        />
+                    </div>
+
+                </div>
+            </div>
         </div>
     );
 };

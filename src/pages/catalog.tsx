@@ -1,6 +1,6 @@
 import {GetStaticProps} from 'next';
 
-import {Catalog} from '@/pages-impl/Catalog';
+import Catalog from '@/pages-impl/Catalog';
 import {getCategoriesPreviews} from '@/services/products';
 import {ProductCategoryType} from '@/domain/productsCategories/types';
 
