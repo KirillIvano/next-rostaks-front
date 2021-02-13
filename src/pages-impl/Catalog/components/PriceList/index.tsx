@@ -1,7 +1,6 @@
 import React from 'react';
 
-import {DownloadButton} from '@/components';
-import {getFileUrl} from '@/util/getFileUrl';
+import {PriceListDownloadButton} from '@/components';
 
 import styles from './styles.module.scss';
 
@@ -12,14 +11,9 @@ const PriceList = () => (
             {'Вы можете сразу скачать полный прайс лист или посмотреть наш каталог выше.'}
         </p>
 
-        <DownloadButton
-            className={styles.priceListDownload}
-
-            fileName="rostaks_прайс.xlxs"
-            url={getFileUrl('price.xlsx')}
-        >
+        <PriceListDownloadButton className={styles.priceListDownload}>
             Скачать прайс лист
-        </DownloadButton>
+        </PriceListDownloadButton>
     </div>
 );
 
