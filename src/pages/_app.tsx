@@ -11,19 +11,17 @@ type AppProps = {
     Component: NextComponentType
 }
 
-const App = ({Component, ...props}: AppProps) => {
-    return (
-        <div className="appContainer">
-            <div>
-                <Header />
-                <Component {...props} />
-            </div>
-
-            <MessagesBox />
-
-            <Footer />
+const App = ({Component, ...props}: AppProps) => (
+    <div className="appContainer">
+        <div>
+            <Header />
+            <Component {...props} />
         </div>
-    );
-};
+
+        <MessagesBox />
+
+        <Footer />
+    </div>
+);
 
 export default App;

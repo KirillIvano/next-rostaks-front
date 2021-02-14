@@ -68,9 +68,7 @@ const Catalog = observer(({pageProps}: CatalogProps) => {
                                     'col-md-9 col-xs-12',
                                 )}
                             >
-                                <Products
-                                    wrapperClass={styles.catalogProducts}
-                                />
+                                <Products wrapperClass={styles.catalogProducts} />
                             </div>
                         </div>
                     </section>

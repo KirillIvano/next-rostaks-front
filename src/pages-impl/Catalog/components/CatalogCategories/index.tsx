@@ -20,7 +20,12 @@ const CatalogCategories = ({className}: CatalogCategoriesProps) => {
     const router = useRouter();
     const handleSelect = useCallback(
         (id: number | null) =>
-            router.push('/catalog' + (id ? `?categoryId=${id}` : '')),
+            router.push(
+                {
+                    pathname: '/catalog',
+                    query: {categoryId: id},
+                },
+            ),
         [router],
     );
 
@@ -43,7 +48,6 @@ const CatalogCategories = ({className}: CatalogCategoriesProps) => {
                     selected={categoryId === null}
                 />
             </div>
-
 
             {categories.map(
                 category => (

@@ -59,6 +59,10 @@ class CatalogStoreBase {
 
     @computed
     get digestedProducts(): ProductPreviewType[] {
+        if (!this.productsGettingFinished) {
+            return [];
+        }
+
         let res = this.currentCategoryId ?
             this._productsStore.productsPreviews.filter(({categoryId}) => categoryId === this.currentCategoryId) :
             this._productsStore.productsPreviews;

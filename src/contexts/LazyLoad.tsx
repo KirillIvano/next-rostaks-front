@@ -24,13 +24,15 @@ export const LazyLoadProvider = ({
 
     useEffect(() => {
         const debouncer = new Debouncer(100);
-        const handleScroll = () =>
+        const handleScroll = () => {
             debouncer.fire(() => setCurrentScroll(pageYOffset));
+        };
 
-        setInterval(handleScroll, 200);
+        const intervalId = setInterval(handleScroll, 300);
         window.addEventListener('scroll', handleScroll);
 
         return () => {
+            clearInterval(intervalId);
             window.removeEventListener('scroll', handleScroll);
             debouncer.cancel();
         };
