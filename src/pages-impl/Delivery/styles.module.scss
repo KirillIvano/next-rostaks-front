@@ -1,0 +1,37 @@
+@import "~vars/pads";
+@import "~vars/colors";
+@import "~vars/fonts";
+
+.deliveryPageWrapper {
+    width: 100%;
+    max-width: 512px;
+
+    padding-top: $pad8;
+    padding-bottom: $pad16;
+}
+
+.deliveryPageHeading {
+    margin-bottom: $pad4;
+
+    color: $black;
+    font-size: $font_xl;
+}
+
+.deliverySectionHeading {
+    margin-bottom: $pad2;
+    margin-top: $pad4;
+
+    color: $black;
+    font-size: $font_lg;
+}
+
+.deliveryParagraph {
+    margin-top: $pad2;
+
+    color: $dark_gray;
+    font-size: $font_md;
+}
+
+.catalogButton {
+    margin-top: $pad6;
+}

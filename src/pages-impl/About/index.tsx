@@ -4,9 +4,9 @@ import {useRouter} from 'next/router';
 import {PriceListDownloadButton} from '@/components';
 import {useScrollTop} from '@/hooks/useScrollTop';
 import {Box, Button} from '@/uikit';
+import {getCatalogPath} from '@/routes';
 
 import styles from './styles.module.scss';
-import {getCatalogPath} from '@/routes';
 
 
 type AssortmentSectionProps = {
