@@ -16,9 +16,7 @@ const PriceListDownload = ({
 }: PriceListDownloadProps) => (
     <DownloadButton
         className={className}
-
-        fileName="rostaks_прайс.xlxs"
-        url={getFileUrl('price.xlsx')}
+        url={getFileUrl('/priceList')}
     >
         {children}
     </DownloadButton>

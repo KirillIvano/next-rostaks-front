@@ -9,8 +9,8 @@ import styles from './styles.module.scss';
 type DownloadButtonProps = {
     children: string;
     url: string;
-    fileName: string;
 
+    fileName?: string;
     className?: string;
 };
 
@@ -24,7 +24,7 @@ const DownloadButton = ({
     const handleClick = useCallback(() => {
         const linkEl = document.createElement('a');
 
-        linkEl.download = fileName;
+        linkEl.download = fileName || url;
         linkEl.href = url;
 
         linkEl.click();
