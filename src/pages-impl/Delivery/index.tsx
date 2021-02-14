@@ -7,6 +7,7 @@ import {getCatalogPath} from '@/routes';
 import styles from './styles.module.scss';
 
 
+// TODO: сделать компоненты для типографики
 const Delivery = () => {
     const router = useRouter();
 

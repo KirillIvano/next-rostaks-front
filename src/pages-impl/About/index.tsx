@@ -39,6 +39,7 @@ const AssortmentSection = ({className}: AssortmentSectionProps) => {
     );
 };
 
+// TODO: сделать компоненты для типографики
 const About = () => {
     useScrollTop();
 
