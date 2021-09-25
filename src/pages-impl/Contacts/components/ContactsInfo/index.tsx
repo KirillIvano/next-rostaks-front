@@ -52,6 +52,13 @@ const ContactsInfo = () => (
                 <p className={styles.descriptionItem}>
                     ОГРН: 1037700140400
                 </p>
+                <p className={styles.descriptionItem}>
+                    Юридический адрес:
+                    Россия, 111672, г. Москва, ул. Новокосинская, д. 14, корпус 3, этаж 1, помещение 1А, ком. 6
+                </p>
+                <p className={styles.descriptionItem}>
+                    Производство: г.Реутов, Никольская 3
+                </p>
             </div>
 
             <div className={classnames(

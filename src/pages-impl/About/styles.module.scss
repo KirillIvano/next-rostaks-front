@@ -36,21 +36,17 @@
         line-height: 1.5;
         font-size: $font_sm;
         color: $dark_gray;
+
+        ul {
+            padding-left: $pad6;
+        
+            li {
+                list-style: disc;
+            }
+        }
     }
 }
 
-.assortmentLinks {
-    display: flex;
-
-    .assortmentLink {
-        flex: 1 0;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .assortmentLink:last-child {
-        margin-left: $pad2;
-    }
+.assortmentLink {
+    margin-top: $pad8;
 }

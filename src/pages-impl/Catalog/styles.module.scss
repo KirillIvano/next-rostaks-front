@@ -22,6 +22,19 @@
             }
         }
     }
+
+    .managerInfo {
+        max-width: 400px;
+        margin-top: $pad10;
+
+        .managerHeading {
+            font-size: $font_lg;
+        }
+
+        .managerItem {
+            margin-top: $pad3;
+        }
+    }
 }
 
 @media all and (max-width: $screen_sm) {

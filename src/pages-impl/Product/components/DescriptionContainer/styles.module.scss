@@ -11,15 +11,16 @@
     h3,
     h4 {
         color: $black;
+        font-weight: bold;
     }
 
-    h1 { margin-top: $pad10 }
-    h2 { margin-top: $pad10 }
-    h3 { margin-top: $pad8 }
-    h4 { margin-top: $pad6 }
+    h1 { margin-top: $pad6 }
+    h2 { margin-top: $pad6 }
+    h3 { margin-top: $pad4 }
+    h4 { margin-top: $pad3 }
 
     p {
-        margin-top: $pad4;
+        margin-top: $pad1;
     }
 
     ul {

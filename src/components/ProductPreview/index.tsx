@@ -64,9 +64,7 @@ const ProductPreview = ({
 
                     <p className={styles.productPrice}>
                         {
-                            price === 0 ?
-                                'Цена у менеджера' :
-                                `~ ${price} ₽/${PAINT_MEASURE}`
+                            Boolean(price) && `~ ${price} ₽/${PAINT_MEASURE}`
                         }
                     </p>
                 </div>

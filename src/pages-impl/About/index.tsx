@@ -18,23 +18,12 @@ const AssortmentSection = ({className}: AssortmentSectionProps) => {
 
     return (
         <div className={className}>
-            <p className={styles.aboutParagraph}>
-                Также, увидеть ассортимент вы можете прямо у нас на сайте, по ссылкам ниже.
-            </p>
-
-            <div className={styles.assortmentLinks}>
-                <PriceListDownloadButton className={styles.assortmentLink}>
-                    Скачать прайс лист
-                </PriceListDownloadButton>
-
-                <Button
-                    className={styles.assortmentLink}
-                    onClick={() => router.push(getCatalogPath())}
-                >
-                    Перейти в каталог
-                </Button>
-            </div>
-
+            <Button
+                className={styles.assortmentLink}
+                onClick={() => router.push(getCatalogPath())}
+            >
+                Перейти в каталог
+            </Button>
         </div>
     );
 };
@@ -71,8 +60,7 @@ const About = () => {
                 </p>
 
                 <p className={styles.aboutParagraph}>
-                    Мы работаем с юридическими и физическими лицами, по наличному и безналичному расчёту.
-                    По индивидуальной договоренности возможны различные условия сотрудничества.
+                    Работаем с юридическими и физическими лицами, по наличному и безналичному расчёту.
                 </p>
 
                 <p className={styles.aboutParagraph}>
@@ -94,8 +82,13 @@ const About = () => {
                 </p>
 
                 <p className={styles.aboutParagraph}>
-                    Также, мы предоставляем скидки, осуществляем доставку,
-                    найдем для каждого индивидуальный подход.
+                    Почему мы?<br />
+                    <ul>
+                        <li>Лучшее соотношение цена/качество.</li>
+                        <li>Индивидуальный подход к каждому клиенту. </li>
+                        <li>Скидки постоянным клиентам</li>
+                        <li>Стабильный производитель ЛКМ продукции с 1994 года. </li>
+                    </ul>
                 </p>
 
                 <AssortmentSection />

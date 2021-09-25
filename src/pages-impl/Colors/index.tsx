@@ -17,13 +17,9 @@ const Colors = () => {
 
             <section className={classnames(styles.colorsInfo, 'container')}>
                 <p className={styles.colorsInfoItem}>
-                    {
-                        'Мы производим колеровку красок по каталогам ' +
-                        '«RAL», «Monicolor», «Московская палитра» и по образцам клиентов.'
-                    }
-                </p>
-                <p className={styles.colorsInfoItem}>
-                    Мы производим колеровку краски от 90 кг.
+                    Мы производим колеровку красок по каталогам
+                    «RAL», «Monicolor», «Московская палитра» и по образцам клиентов<br />
+                    (минимальный объём для колеровки 90кг).
                 </p>
                 <p className={styles.colorsInfoItem}>
                     Индивидуальные заказы на цветные материалы принимаются после 100% предоплаты.
@@ -42,28 +38,28 @@ const Colors = () => {
 
             <div className={classnames(styles.gallery, 'container')}>
                 <div className="row">
-                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-4')}>
+                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-6')}>
                         <DecorativeImage
                             src='/colors/intro.jpg'
                             proportions='5x2'
                         />
                     </div>
 
-                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-4')}>
+                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-6')}>
                         <DecorativeImage
                             src='/colors/colors1.jpg'
                             proportions='5x2'
                         />
                     </div>
 
-                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-4')}>
+                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-6')}>
                         <DecorativeImage
                             src='/colors/colors2.jpg'
                             proportions='5x2'
                         />
                     </div>
 
-                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-4')}>
+                    <div className={classnames(styles.galleryItem, 'col-xs-12 col-md-6')}>
                         <DecorativeImage
                             src='/colors/colors3.jpg'
                             proportions='5x2'

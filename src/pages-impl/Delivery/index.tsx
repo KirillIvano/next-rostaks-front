@@ -18,7 +18,7 @@ const Delivery = () => {
 
                 <h2 className={styles.deliverySectionHeading}>Оплата</h2>
                 <p className={styles.deliveryParagraph}>
-                    Мы производим оплату по безналичному расчёту.
+                    По безналичному расчёту.
                 </p>
 
                 <h2 className={styles.deliverySectionHeading}>Доставка</h2>

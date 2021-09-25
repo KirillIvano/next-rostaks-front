@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import {observer} from 'mobx-react-lite';
 
 import {CatalogStaticProps} from '@/pages/catalog';
+import {PhoneWrapper} from '@/components';
 
 import {
     CatalogCategories,
@@ -69,18 +70,20 @@ const Catalog = observer(({pageProps}: CatalogProps) => {
                                 )}
                             >
                                 <Products wrapperClass={styles.catalogProducts} />
-                            </div>
-                        </div>
-                    </section>
 
-                    <section className={styles.contentRow}>
-                        <div className="row">
-                            <div className={'col-md-offset-3 col-md-9'}>
-                                <h1 className={styles.sectionHeadline}>
-                                    {'Прайс лист'}
-                                </h1>
+                                <section className={styles.managerInfo}>
+                                    <h2 className={styles.managerHeading}>Для уточнения актуальных цен свяжитесь с менеджером</h2>
+                                    <ul>
+                                        <li className={styles.managerItem}>
+                                            <PhoneWrapper phone={'8(495) 927-28-24'}></PhoneWrapper>
+                                        </li>
+                                        <li className={styles.managerItem}>
+                                            <PhoneWrapper phone={'8(499) 550-23-53'}></PhoneWrapper>
+                                        </li>
 
-                                <PriceList />
+                                        <li className={styles.managerItem}>rostax@mail.ru </li>
+                                    </ul>
+                                </section>
                             </div>
                         </div>
                     </section>
