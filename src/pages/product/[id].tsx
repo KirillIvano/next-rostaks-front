@@ -12,7 +12,7 @@ const getProductsIds = async () => {
 
     if (!productsPreviewsRes.ok) throw new Error(productsPreviewsRes.error);
 
-    const productsPreviews = productsPreviewsRes.data.products;
+    const productsPreviews = productsPreviewsRes.data.data.products;
     const productsIds = productsPreviews.map(({id}) => id);
 
     return productsIds;
@@ -41,7 +41,8 @@ export const getStaticProps: GetStaticProps<ProductPageStaticProps> = async ({pa
         throw new Error(productRes.error);
     }
 
-    const {product} = productRes.data;
+    const {data: {data: {product}}} = productRes;
+
     const {categoryId} = product;
 
     const categoryRes = await getCategoryById(categoryId);
@@ -49,7 +50,7 @@ export const getStaticProps: GetStaticProps<ProductPageStaticProps> = async ({pa
         throw new Error(categoryRes.error);
     }
 
-    const {category} = categoryRes.data;
+    const {data: {data: {category}}} = categoryRes;
 
     return {
         props: {product, category},

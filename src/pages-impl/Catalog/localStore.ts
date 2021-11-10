@@ -86,7 +86,7 @@ class CatalogStoreBase {
         const res = await getProductsPreviews();
 
         if (res.ok) {
-            this._productsStore.addProductsPreviews(res.data.products);
+            this._productsStore.addProductsPreviews(res.data.data.products);
         } else {
             this.productsGettingError = res.error;
         }
