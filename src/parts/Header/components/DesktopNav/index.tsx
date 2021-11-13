@@ -9,6 +9,7 @@ import {
     getColorsPath,
     getContactsPath,
     getDeliveryPath,
+    getObjectsPath,
 } from '@/routes';
 
 import styles from './styles.module.scss';
@@ -74,6 +75,12 @@ const DesktopNav = ({className}: DesktopNavProps) => {
                 name={'О нас'}
                 path={getAboutPath()}
                 isSelected={getAboutPath() === route}
+            />
+
+            <DesktopNavItem
+                name={'Наши объекты'}
+                path={getObjectsPath()}
+                isSelected={getObjectsPath() === route}
             />
 
             <DesktopNavItem
