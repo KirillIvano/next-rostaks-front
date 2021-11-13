@@ -1,0 +1,29 @@
+@import "~vars/pads";
+@import "~vars/fonts";
+@import "~vars/colors";
+
+.objectsPage {
+    padding-top: $pad8;
+    padding-bottom: $pad16;
+
+    .pageHeadline {
+        color: $black;
+        font-size: $font_xxl;
+    }
+
+    .descriptionBlock {
+        margin-top: $pad6;
+
+        .descriptionHeadline {
+            font-size: $font_lg;
+
+            margin-bottom: $pad4;
+        }
+
+        .descriptionItem {
+            margin-top: $pad2;
+            font-size: $font_md;
+            color: $dark_gray;
+        }
+    }
+}
