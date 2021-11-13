@@ -10,7 +10,6 @@ import {
     Products,
     SearchInput,
     PriceSort,
-    PriceList,
 } from './components';
 import {useCategoryId} from './hooks/useCategoryId';
 import {useCatalogStore, withCatalogStore} from './hooks/useCatalogStore';

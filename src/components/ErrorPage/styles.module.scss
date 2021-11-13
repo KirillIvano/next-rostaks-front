@@ -1,0 +1,39 @@
+@import "~vars/pads";
+@import "~vars/screens";
+@import "~vars/fonts";
+@import "~vars/colors";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: $pad6;
+
+    padding-top: 260px;
+
+    text-align: center;
+
+    .heading {
+        font-size: $font_xxl;
+    }
+
+    .subheading {
+        font-size: $font_md;
+        color: $dark_gray;
+    }
+}
+
+@media all and (max-width: $screen_sm) {
+    .container {
+        padding-top: 120px;
+
+        .heading {
+            font-size: $font_lg;
+        }
+
+        .subheading {
+            font-size: $font_md;
+        }
+    }
+}

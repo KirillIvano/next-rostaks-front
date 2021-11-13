@@ -41,7 +41,7 @@ export const getStaticProps: GetStaticProps<ProductPageStaticProps> = async ({pa
         throw new Error(productRes.error);
     }
 
-    const {data: {data: {product}}} = productRes;
+    const {data: {product}} = productRes;
 
     const {categoryId} = product;
 
@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps<ProductPageStaticProps> = async ({pa
         throw new Error(categoryRes.error);
     }
 
-    const {data: {data: {category}}} = categoryRes;
+    const {data: {category}} = categoryRes;
 
     return {
         props: {product, category},

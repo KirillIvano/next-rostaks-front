@@ -3,16 +3,14 @@ import {getApiUrl} from '@/services/util/getApiUrl';
 
 import {ObjectDto, ObjectImageDto} from './dto';
 
-
-
 export const getObjectImages = () =>
-    request<{products: ObjectImageDto[]}>(getApiUrl('/objectImages/all'));
+    request<{images: ObjectImageDto[]}>(getApiUrl('/objectImages/all'));
 
 export const getObjectImageById = (objectImageId: number) =>
-    request<{products: ObjectImageDto[]}>(getApiUrl(`/objectImages/${objectImageId}`));
+    request<{images: ObjectImageDto[]}>(getApiUrl(`/objectImages/${objectImageId}`));
 
 export const getObjects = () =>
-    request<{categories: ObjectDto[]}>(getApiUrl('/object/all'));
+    request<{objects: ObjectDto[]}>(getApiUrl('/object/all'));
 
-export const getObjectById = (categoryId: number) =>
-    request<{category: ObjectDto}>(getApiUrl(`/object/${categoryId}`));
+export const getObjectById = (objectId: number) =>
+    request<{object: ObjectDto}>(getApiUrl(`/object/${objectId}`));

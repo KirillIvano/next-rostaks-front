@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
         throw new Error(`Ошибка при загрузке категорий: ${categoriesRes.error}`);
     }
 
-    const {data: {data: {categories}}} = categoriesRes;
+    const {data: {categories}} = categoriesRes;
 
     return {
         props: {

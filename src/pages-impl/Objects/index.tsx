@@ -1,21 +1,33 @@
 import React from 'react';
-import classnames from 'classnames';
+import cn from 'classnames';
 
+import {Box} from '@/uikit';
+import type {ObjectStaticProps} from '@/pages/objects';
+
+import {WithObjectStaticData} from './hooks/useObjectStaticData';
 import styles from './styles.module.scss';
 import ObjectsList from './components/ObjectsList';
+import {ErrorPage} from '@/components';
 
+type ObjectsPageProps = {
+    pageProps: ObjectStaticProps
+}
 
-const ObjectsPage = () => {
+const ObjectsPage = ({pageProps}: ObjectsPageProps) => {
+    if (pageProps.error) return <ErrorPage />;
+
     return (
-        <div className={classnames(styles.objectsPage, 'container')}>
-            <h1
-                className={classnames(styles.pageHeadline)}
-            >
-                Наши объекты
-            </h1>
+        <WithObjectStaticData value={pageProps}>
+            <Box className={cn(styles.objectsPage, 'container')}>
+                <h1
+                    className={styles.pageHeadline}
+                >
+                    Наши объекты
+                </h1>
 
-            <ObjectsList />
-        </div>
+                <ObjectsList />
+            </Box>
+        </WithObjectStaticData>
     );
 };
 

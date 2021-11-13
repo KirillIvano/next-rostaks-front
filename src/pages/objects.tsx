@@ -2,29 +2,28 @@ import {GetStaticProps} from 'next';
 
 import Object from '@/pages-impl/Objects';
 import {getObjects} from '@/services/objects';
-import {ObjectImageType} from '@/domain/objectImages/types';
+import {ObjectType} from '@/domain/objects/types';
 
+
+const enhanceStaticPropsRes = (props: ObjectStaticProps) => ({
+    props,
+    revalidate: 5,
+});
 
 export type ObjectStaticProps = {
-    objects: ObjectImageType[];
-}
-
-
+    objects: ObjectType[];
+    error: false;
+} | {error: true};
 export const getStaticProps: GetStaticProps = async () => {
     const objectsRes = await getObjects();
 
     if (!objectsRes.ok) {
-        throw new Error(`Ошибка при загрузке категорий: ${objectsRes.error}`);
+        return enhanceStaticPropsRes({error: true});
     }
 
-    const {data: {data: {objects}}} = objectsRes;
+    const {data: {objects}} = objectsRes;
 
-    return {
-        props: {
-            objects: objects,
-        },
-        revalidate: 5,
-    };
+    return enhanceStaticPropsRes({objects, error: false});
 };
 
 export default Object;

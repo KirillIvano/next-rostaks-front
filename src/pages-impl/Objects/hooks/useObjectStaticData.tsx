@@ -1,15 +1,18 @@
 import React, {createContext, useContext} from 'react';
 
-import {ObjectStaticProps} from '@/pages/objects';
+import type {ObjectType} from '@/domain/objects/types';
 
+type ObjectStaticContextType = {
+    objects: ObjectType[];
+}
 
-const DEFAULT_VALUE: ObjectStaticProps = {
+const DEFAULT_VALUE = {
     objects: [],
 };
 
-const ObjectStaticContext = createContext(DEFAULT_VALUE);
+const ObjectStaticContext = createContext<ObjectStaticContextType>(DEFAULT_VALUE);
 
-export const WithObjectStaticData = ({children, value}: {children: React.ReactNode, value: ObjectStaticProps}) =>
+export const WithObjectStaticData = ({children, value}: {children: React.ReactNode, value: ObjectStaticContextType}) =>
     <ObjectStaticContext.Provider value={value}>{children}</ObjectStaticContext.Provider>;
 
 export const useObjectStaticData = () => useContext(ObjectStaticContext);

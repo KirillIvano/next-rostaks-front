@@ -7,3 +7,4 @@ export {default as DecorativeImage} from './DecorativeImage';
 export {default as LazyProductImage} from './LazyProductImage';
 export {default as PriceListDownloadButton} from './PriceListDownloadButton';
 export {Metrika} from './Metrika';
+export {ErrorPage} from './ErrorPage';

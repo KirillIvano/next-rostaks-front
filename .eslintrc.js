@@ -47,12 +47,12 @@ module.exports = {
         'no-console': ['error'],
         'object-curly-spacing': ['error', 'never'],
 
+        'react/destructuring-assignment': 'off',
         'react/prop-types': 'off',
         'react/jsx-uses-react': 'error',
         'react/jsx-uses-vars': 'error',
         'react/boolean-prop-naming': 'error',
         'react/button-has-type': 'off',
-        'react/destructuring-assignment': 'error',
         'react/no-deprecated': 'error',
         'react/no-typos': 'error',
         'react/no-unescaped-entities': 'error',
