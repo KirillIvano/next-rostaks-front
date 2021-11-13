@@ -14,7 +14,7 @@ export const request = async <T extends Record<string, unknown> | Array<unknown>
     url: RequestInfo,
     options?: RequestInit,
 ): Promise<ResponseType<T>> => {
-    let body: T | {error: string};
+    let body: {data: T} | {error: string};
     let ok: boolean, status: number;
 
     try {
@@ -42,7 +42,7 @@ export const request = async <T extends Record<string, unknown> | Array<unknown>
     }
 
     return {
-        data: body as T,
+        data: (body as {data: T}).data,
         ok,
         status,
     };

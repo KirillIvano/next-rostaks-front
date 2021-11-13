@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-        api: 'https://api.pkf-rostax.ru',
+        api: 'http://localhost:5000',
         imagesHost: 'https://pkf-rostax.ru',
     },
 };
