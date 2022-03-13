@@ -12,7 +12,7 @@ const getProductsIds = async () => {
 
     if (!productsPreviewsRes.ok) throw new Error(productsPreviewsRes.error);
 
-    const productsPreviews = productsPreviewsRes.data.data.products;
+    const productsPreviews = productsPreviewsRes.data.products;
     const productsIds = productsPreviews.map(({id}) => id);
 
     return productsIds;

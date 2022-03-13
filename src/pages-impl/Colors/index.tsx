@@ -17,9 +17,9 @@ const Colors = () => {
 
             <section className={classnames(styles.colorsInfo, 'container')}>
                 <p className={styles.colorsInfoItem}>
-                    Мы производим колеровку красок по каталогам
-                    «RAL», «Monicolor», «Московская палитра» и по образцам клиентов<br />
-                    (минимальный объём для колеровки 90кг).
+									Колеровка красок производится по каталогам «RAL», «NCS», «Monicolor», «Art Parade»,
+									«Caparol», «Tikkurila facade», «Московская палитра» и по образцам клиентов<br />
+									(минимальный объём для колеровки 90кг).
                 </p>
                 <p className={styles.colorsInfoItem}>
                     Индивидуальные заказы на цветные материалы принимаются после 100% предоплаты.

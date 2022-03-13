@@ -3,4 +3,7 @@ module.exports = {
         api: 'https://api.pkf-rostax.ru',
         imagesHost: 'https://pkf-rostax.ru',
     },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
 };

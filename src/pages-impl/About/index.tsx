@@ -55,12 +55,11 @@ const About = () => {
                 </p>
 
                 <p className={styles.aboutParagraph}>
-                    Мы производим колеровку красок по каталогам <span className={styles.strong}>«RAL», «Monicolor»,
-                    «Московская палитра» и по образцам клиентов.</span>
+									Мы производим колеровку красок по каталогам <span className={styles.strong}>«RAL», «NCS», «Monicolor», по образцам клиентов.</span>
                 </p>
 
                 <p className={styles.aboutParagraph}>
-                    Работаем с юридическими и физическими лицами, по наличному и безналичному расчёту.
+                    Работаем с юридическими и физическими лицами.
                 </p>
 
                 <p className={styles.aboutParagraph}>

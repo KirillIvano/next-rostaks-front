@@ -78,12 +78,6 @@ const DesktopNav = ({className}: DesktopNavProps) => {
             />
 
             <DesktopNavItem
-                name={'Наши объекты'}
-                path={getObjectsPath()}
-                isSelected={getObjectsPath() === route}
-            />
-
-            <DesktopNavItem
                 name={'Контакты'}
                 path={getContactsPath()}
                 isSelected={getContactsPath() === route}
